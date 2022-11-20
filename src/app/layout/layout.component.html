@@ -1,0 +1,17 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="" class="example-toolbar">
+        <button mat-icon-button (click)="openSideNav()">
+            <i class="fa fa-bars fa-fw"></i>
+        </button>
+        <app-header style="width: 100%;"></app-header>
+    </mat-toolbar>
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+            <app-sidenav></app-sidenav>
+        </mat-sidenav>
+        <mat-sidenav-content class="mat-sidenav-content-styles">
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+        <app-footer></app-footer>
+    </mat-sidenav-container>
+</div>

@@ -1,0 +1,89 @@
+<div class="container-fluid">
+    <br />
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <mat-card class="example-card">
+                <br />
+                <mat-card-header>
+                    <mat-card-title style="margin-left: -10px;">
+                        <a routerLink="/home">
+                            <img src="../../assets/logo/DMTiPACS2.png" style="height: 30px;" />
+                        </a>
+                        <br />
+                        <br />
+                        <h3>
+                            Create an account
+                        </h3>
+                        <h6 style="margin-left: 1px;">to continue to application</h6>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <form (ngSubmit)="btnRegisterClick()">
+                        <mat-form-field class="input-100-percent" appearance="outline">
+                            <mat-label>Full Name</mat-label>
+                            <input required matInput [(ngModel)]="userModel.FullName" [ngModelOptions]="{standalone: true}" [disabled]="isFieldDisabled"
+                            />
+                        </mat-form-field>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="input-100-percent" appearance="outline">
+                                    <mat-label>Email</mat-label>
+                                    <input required matInput [(ngModel)]="userModel.Email" [ngModelOptions]="{standalone: true}" [disabled]="isFieldDisabled"
+                                    />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field class="input-100-percent" appearance="outline">
+                                    <mat-label>Contact Number</mat-label>
+                                    <input required matInput [(ngModel)]="userModel.ContactNumber" [ngModelOptions]="{standalone: true}" [disabled]="isFieldDisabled"
+                                    />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <mat-form-field class="input-100-percent" appearance="outline">
+                            <mat-label>Address</mat-label>
+                            <textarea required rows="3" matInput [(ngModel)]="userModel.Address" [ngModelOptions]="{standalone: true}" [disabled]="isFieldDisabled"></textarea>
+                        </mat-form-field>
+                        <mat-form-field class="input-100-percent" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input required matInput [(ngModel)]="userModel.UserName" [ngModelOptions]="{standalone: true}" [disabled]="isFieldDisabled"
+                            />
+                        </mat-form-field>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="input-100-percent" appearance="outline">
+                                    <mat-label>Password</mat-label>
+                                    <input required matInput [type]="passwordhide ? 'text' : 'password'" [(ngModel)]="userModel.Password" [ngModelOptions]="{standalone: true}"
+                                        [disabled]="isFieldDisabled" />
+                                    <mat-icon matSuffix (click)="passwordhide = !passwordhide">{{passwordhide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field class="input-100-percent" appearance="outline">
+                                    <mat-label>Confirm Password</mat-label>
+                                    <input required matInput [type]="confirmPasswordhide ? 'text' : 'password'" [(ngModel)]="userModel.ConfirmPassword" [ngModelOptions]="{standalone: true}"
+                                        [disabled]="isFieldDisabled" />
+                                    <mat-icon matSuffix (click)="confirmPasswordhide = !confirmPasswordhide">{{confirmPasswordhide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <button mat-raised-button color="primary" type="submit" id="btnRegister" style="margin-top: 15px; height: 50px; font-size: 20px;">
+                            Register
+                        </button>
+                    </form>
+                </mat-card-content>
+                <br />
+                <div>
+                    <a routerLink="/account/login">Login to an existing account</a>
+                </div>
+            </mat-card>
+            <br />
+            <p class="text-center" style="color: gray; font-size: 12px;">
+                Copyright © 2018 - DMTiPACS Application
+                <br /> version 3.0.Beta.20180523
+            </p>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

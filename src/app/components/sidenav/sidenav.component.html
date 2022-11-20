@@ -1,0 +1,52 @@
+<div class="side-username">
+    <table style="width: 100%;" border="0">
+        <tr>
+            <td style="width: 11.5%;">
+                <img src="../../assets/svgicons/user.svg" class="svg-icon-style-side-menu" />
+            </td>
+            <td style="width: 88.5%; font-size: 16px; padding-top: 3.5px;">
+                {{ username }}
+            </td>
+        </tr>
+    </table>
+</div>
+<mat-divider></mat-divider>
+<div class="side-facility">
+    <div class="form-group">
+        <label>Current Facility</label>
+        <!-- <input type="text" class="form-control" disabled [(ngModel)]="currentFacility" aria-describedby="basic-addon2"> -->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" disabled [(ngModel)]="currentFacility" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-info" type="button" (click)="launchFacilityDialog()">
+                    <i class="fa fa-building"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-divider></mat-divider>
+<mat-nav-list class="mat-nav-list-styles">
+    <a mat-list-item routerLink="/software/dashboard" id="sideNavMenuDashboard" (click)="sideNavMenuClick('dashboard')">&nbsp;&nbsp;
+        <img src="../../assets/svgicons/grid.svg" class="svg-icon-style-side-menu" /> &nbsp; Dashboard
+    </a>
+    <a mat-list-item routerLink="/software/body/parts" id="sideNavMenuBodyParts" (click)="sideNavMenuClick('bodyParts')">&nbsp;&nbsp;
+        <img src="../../assets/svgicons/broken-arm.svg" class="svg-icon-style-side-menu" /> &nbsp; Body Parts
+    </a>
+    <a mat-list-item routerLink="/software/modality/procedure" id="sideNavMenuModalityProcedure" (click)="sideNavMenuClick('modalityProcedure')">&nbsp;&nbsp;
+        <img src="../../assets/svgicons/mri.svg" class="svg-icon-style-side-menu" /> &nbsp; Modality Procedure
+    </a>
+    <a mat-list-item routerLink="/software/user" id="sideNavMenuUser" (click)="sideNavMenuClick('user')">&nbsp;&nbsp;
+        <img src="../../assets/svgicons/key.svg" class="svg-icon-style-side-menu" /> &nbsp; User
+    </a>
+    <a mat-list-item routerLink="/software/rate" id="sideNavMenuRate" (click)="sideNavMenuClick('rate')">&nbsp;&nbsp;
+        <img src="../../assets/svgicons/favorite.svg" class="svg-icon-style-side-menu" /> &nbsp; Rate
+    </a>
+    <a mat-list-item routerLink="/software/procedure" id="sideNavMenuProcedure" (click)="sideNavMenuClick('procedure')">&nbsp;&nbsp;
+        <img src="../../assets/svgicons/x-rays.svg" class="svg-icon-style-side-menu" /> &nbsp; Procedure
+    </a>
+    <a mat-list-item routerLink="/software/reports" id="sideNavMenuReports" (click)="sideNavMenuClick('reports')">&nbsp;&nbsp;
+        <img src="../../assets/svgicons/printer.svg" class="svg-icon-style-side-menu" /> &nbsp; Reports
+    </a>
+</mat-nav-list>
+<mat-divider></mat-divider>

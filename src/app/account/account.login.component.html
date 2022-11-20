@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <br />
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <mat-card class="example-card">
+                <br />
+                <mat-card-header>
+                    <mat-card-title style="margin-left: -10px;">
+                        <a routerLink="/home">
+                            <img src="../../assets/logo/DMTiPACS2.png" style="height: 30px;" />
+                        </a>
+                        <br />
+                        <br />
+                        <h3>
+                            Sign in
+                        </h3>
+                        <h6 style="margin-left: 1px;">to continue to application</h6>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <form (ngSubmit)="btnLoginClick()">
+                        <mat-form-field class="input-100-percent" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input required matInput id="inpUsername" [(ngModel)]="userModel.UserName" [ngModelOptions]="{standalone: true}" />
+                        </mat-form-field>
+                        <mat-form-field class="input-100-percent" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input required matInput id="inpPassword" placeholder="Enter your password" [(ngModel)]="userModel.Password" [ngModelOptions]="{standalone: true}"
+                                [type]="hide ? 'text' : 'password'">
+                            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                        </mat-form-field>
+                        <br />
+                        <button mat-raised-button color="primary" type="submit" id="btnLogin" style="margin-top: 15px; height: 50px; font-size: 20px;">
+                            Login
+                        </button>
+                    </form>
+                </mat-card-content>
+                <br />
+                <!-- <div>
+                    <a routerLink="/account/register">Create an account</a>
+                </div> -->
+            </mat-card>
+            <br />
+            <p class="text-center" style="color: gray; font-size: 12px;">
+                Copyright © 2018 - DMTiPACS Application
+                <br /> version 3.20190731
+            </p>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

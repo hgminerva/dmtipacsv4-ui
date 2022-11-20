@@ -1,0 +1,34 @@
+.mat-nav-list-styles {
+    width: 300px;
+}
+
+.svg-icon-style-side-menu {
+  height: 20px;
+}
+
+.side-username {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.side-facility {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+}
+
+.cbo-100 {
+  width: 100%;
+}
+
+.sideNavMenuStyles:link, .sideNavMenuStyles:visited, .sideNavMenuStyles:hover, .sideNavMenuStyles:active  {
+  background: #f2f2f2;
+  /* color: #fff; */
+}
+
+.sideNavMenuStyles {
+  background: #f2f2f2;
+  /* color: #fff; */
+}

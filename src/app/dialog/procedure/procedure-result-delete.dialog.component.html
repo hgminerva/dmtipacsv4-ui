@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>{{ title }}</h2>
+<mat-dialog-content>
+    Are you sure you want to delete this procedure result?
+    <br />
+    <br />
+</mat-dialog-content>
+<mat-dialog-actions>
+    <table border="0" style="width: 100%;">
+        <tr>
+            <td style="width: 89%;"></td>
+            <td style="width: 5%;" align="right">
+                <button mat-raised-button color="warn" id="btnConfirmDeleteProcedureResult" (click)="btnConfirmDeleteProcedureResultClick()">
+                    <i class="fa fa-trash fa-fw"></i> Delete
+                </button>
+            </td>
+            <td style="width: 1%;"></td>
+            <td style="width: 5%;" align="right">
+                <button mat-raised-button id="btnCloseConfirmDeleteProcedureResult" [mat-dialog-close]="true">
+                    <i class="fa fa-close fa-fw"></i> Close
+                </button>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+</mat-dialog-actions>

@@ -1,0 +1,87 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a routerLink="/software/dashboard">Dashboard</a>
+    </li>
+    <li class="breadcrumb-item active">
+        Rate
+    </li>
+</ol>
+<div class="card">
+    <div class="card-header">
+        <table border="0" style="width: 100%;">
+            <tr>
+                <td style="width: 90%;" align="left">
+                    <div class="input-group">
+                        <button class="btn btn-info" type="button" [disabled]="isBtnRefreshRateDataDisabled" (click)="getRateData()">
+                            <i class="fa fa-refresh"></i>
+                        </button>
+                        &nbsp; &nbsp;
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <b>Show</b>
+                            </div>
+                        </div>
+                        <wj-combo-box #cboNumberOfRows [itemsSource]="cboShowNumberOfRows" [isEditable]="false" [isRequired]="true" [displayMemberPath]="'rowString'"
+                            [selectedValuePath]="'rowNumber'" (selectedIndexChanged)="cboShowNumberOfRowsOnSelectedIndexChanged(cboNumberOfRows.selectedValue)"
+                            style="width: 180px;">
+                        </wj-combo-box>
+                    </div>
+                </td>
+                <td style="width: 5%;" align="right">
+                    <button mat-raised-button color="primary" (click)="btnAddRateClick()">
+                        <i class="fa fa-plus"></i> Add
+                    </button>
+                </td>
+                <td style="width: 5%;" align="right">
+                    <button mat-raised-button color="warn" routerLink="/software/dashboard">
+                        <i class="fa fa-close"></i> Close
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="card-body">
+        <mat-progress-bar class="example-margin" [hidden]="isProgressBarHidden" [color]="'primary'" [mode]="'indeterminate'"></mat-progress-bar>
+        <wj-flex-grid #rateFlexGrid [itemsSource]="rateCollectionView" [selectionMode]="3" [frozenColumns]="2">
+            <wj-flex-grid-filter></wj-flex-grid-filter>
+            <wj-flex-grid-column [header]="Edit" [isReadOnly]="true" [isContentHtml]="true" [width]="95">
+                <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <button mat-raised-button color="primary" class="btn-xs" (click)="btnEditRateClick()">
+                        <i class="fa fa-edit fa-fw"></i> Edit
+                    </button>
+                </ng-template>
+            </wj-flex-grid-column>
+            <wj-flex-grid-column [header]="Delete" [isReadOnly]="true" [width]="96">
+                <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <button mat-raised-button color="warn" class="btn-xs" (click)="btnDeleteRateClick()">
+                        <i class="fa fa-trash fa-fw"></i> Delete
+                    </button>
+                </ng-template>
+            </wj-flex-grid-column>
+            <wj-flex-grid-column [header]="'Code'" [binding]="'ModalityProcedureCode'" [isReadOnly]="true" [width]="'1.5*'"></wj-flex-grid-column>
+            <wj-flex-grid-column [header]="'Procedure'" [binding]="'ModalityProcedure'" [isReadOnly]="true" [width]="'2*'"></wj-flex-grid-column>
+            <wj-flex-grid-column [header]="'Facility Rate'" [binding]="'FacilityRate'" [isReadOnly]="true" [width]="'1*'"></wj-flex-grid-column>
+            <wj-flex-grid-column [header]="'Doctor Rate'" [binding]="'DoctorRate'" [isReadOnly]="true" [width]="'1*'"></wj-flex-grid-column>
+            <wj-flex-grid-column [header]="'Image Rate'" [binding]="'ImageRate'" [isReadOnly]="true" [width]="'1*'"></wj-flex-grid-column>
+        </wj-flex-grid>
+    </div>
+    <div class="card-footer">
+        <div class="col-sm-12 btn-group" style="padding: 5px 0px 5px 0px;">
+            <button type="button" class="btn btn-secondary" (click)="rateCollectionView.moveToFirstPage()">
+                <i class="fa fa-fast-backward"></i>
+            </button>
+            <button type="button" class="btn btn-secondary" (click)="rateCollectionView.moveToPreviousPage()">
+                <i class="fa fa-step-backward"></i>
+            </button>
+            <button type="button" class="btn btn-secondary" disabled style="width:100px">
+                {{ rateCollectionView.pageIndex + 1 }} / {{ rateCollectionView.pageCount }}
+            </button>
+            <button type="button" class="btn btn-secondary" (click)="rateCollectionView.moveToNextPage()">
+                <i class="fa fa-step-forward"></i>
+            </button>
+            <button type="button" class="btn btn-secondary" (click)="rateCollectionView.moveToLastPage()">
+                <i class="fa fa-fast-forward"></i>
+            </button>
+        </div>
+    </div>
+</div>

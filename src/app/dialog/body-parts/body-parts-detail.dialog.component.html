@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>{{ title }}</h2>
+<mat-dialog-content>
+    <mat-form-field class="input-100-percent" appearance="outline">
+        <mat-label>Body Part</mat-label>
+        <input [(ngModel)]="bodyPartsModel.BodyPart" matInput />
+    </mat-form-field>
+    <br /><br />
+</mat-dialog-content>
+<mat-dialog-actions>
+    <table border="0" style="width: 100%;">
+        <tr>
+            <td style="width: 89%;"></td>
+            <td style="width: 5%;" align="right">
+                <button mat-raised-button color="primary" id="btnSaveBodyParts" (click)="btnSaveBodyPartsClick()">
+                    <i class="fa fa-save"></i> Save
+                </button>
+            </td>
+            <td style="width: 1%;"></td>
+            <td style="width: 5%;" align="right">
+                <button mat-raised-button color="warn" id="btnCloseBodyParts" [mat-dialog-close]="true">
+                    <i class="fa fa-close"></i> Close
+                </button>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+</mat-dialog-actions>

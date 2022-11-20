@@ -1,0 +1,70 @@
+<h2 mat-dialog-title>{{ title }}</h2>
+<mat-dialog-content>
+    <mat-form-field class="input-100-percent" appearance="outline">
+        <mat-label>Procedure Code</mat-label>
+        <input [(ngModel)]="rateModel.ModalityProcedureCode" matInput />
+    </mat-form-field>
+    <div class="row">
+        <div class="col-md-4">
+            <mat-form-field class="input-100-percent" appearance="outline">
+                <mat-label>Facility Rate</mat-label>
+                <input type="number" [(ngModel)]="rateModel.FacilityRate" matInput />
+            </mat-form-field>
+        </div>
+        <div class="col-md-4">
+            <mat-form-field class="input-100-percent" appearance="outline">
+                <mat-label>Doctor Rate</mat-label>
+                <input type="number" [(ngModel)]="rateModel.DoctorRate" matInput />
+            </mat-form-field>
+        </div>
+        <div class="col-md-4">
+            <mat-form-field class="input-100-percent" appearance="outline">
+                <mat-label>Image Rate</mat-label>
+                <input type="number" [(ngModel)]="rateModel.ImageRate" matInput />
+            </mat-form-field>
+        </div>
+    </div>
+    <mat-form-field class="input-100-percent" appearance="outline">
+        <mat-label>Remarks</mat-label>
+        <textarea [(ngModel)]="rateModel.Remarks" rows="9" matInput></textarea>
+    </mat-form-field>
+    <mat-form-field class="input-100-percent" appearance="outline">
+        <mat-label>Modality Procedure</mat-label>
+        <mat-select matInput placeholder="Select Modality Procedure" [(ngModel)]="rateModel.ModalityProcedureId">
+            <mat-option>--</mat-option>
+            <mat-option *ngFor="let cboModalityProcedure of cboModalityProcedureObservableArray" [value]="cboModalityProcedure.Id">
+                {{ cboModalityProcedure.ModalityProcedureResultTemplate }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <!-- <div class="form-group">
+        <label>Modality Procedure</label>
+        <div>
+            <wj-combo-box class="form-control" #cboModality [itemsSource]="cboModalityProcedureObservableArray" [isEditable]="false"
+                [isRequired]="true" [displayMemberPath]="'ModalityProcedure'" [selectedValuePath]="'Id'" [(ngModel)]="rateModel.ModalityProcedureId">
+            </wj-combo-box>
+        </div>
+    </div> -->
+    <br />
+    <br />
+</mat-dialog-content>
+<mat-dialog-actions>
+    <table border="0" style="width: 100%;">
+        <tr>
+            <td style="width: 89%;"></td>
+            <td style="width: 5%;" align="right">
+                <button mat-raised-button color="primary" id="btnSaveRate" (click)="btnSaveRateClick()">
+                    <i class="fa fa-save"></i> Save
+                </button>
+            </td>
+            <td style="width: 1%;"></td>
+            <td style="width: 5%;" align="right">
+                <button mat-raised-button color="warn" id="btnCloseRate" [mat-dialog-close]="true">
+                    <i class="fa fa-close"></i> Close
+                </button>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+</mat-dialog-actions>

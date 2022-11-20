@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>{{ title }}</h2>
+<mat-dialog-content>
+    <mat-form-field class="input-100-percent" appearance="outline">
+        <mat-label>Doctor</mat-label>
+        <mat-select matInput placeholder="Select Doctor" [(ngModel)]="userDoctorModel.DoctorId">
+            <mat-option>--</mat-option>
+            <mat-option *ngFor="let cboDoctor of cboDoctorObservableArray" [value]="cboDoctor.Id">
+                {{ cboDoctor.FullName }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <!-- <div class="form-group">
+        <label>Doctor</label>
+        <div>
+            <wj-combo-box class="input-100-percent" #cboModality [itemsSource]="cboDoctorObservableArray" [isEditable]="false" [isRequired]="true"
+                [displayMemberPath]="'FullName'" [selectedValuePath]="'Id'" [(ngModel)]="userDoctorModel.DoctorId">
+            </wj-combo-box>
+        </div>
+    </div> -->
+    <br />
+    <br />
+</mat-dialog-content>
+<mat-dialog-actions>
+    <table border="0" style="width: 100%;">
+        <tr>
+            <td style="width: 89%;"></td>
+            <td style="width: 5%;" align="right">
+                <button mat-raised-button color="primary" id="btnSaveUserDoctor" (click)="btnSaveUserDoctorClick()">
+                    <i class="fa fa-save"></i> Save
+                </button>
+            </td>
+            <td style="width: 1%;"></td>
+            <td style="width: 5%;" align="right">
+                <button mat-raised-button color="warn" id="btnCloseUserDoctor" [mat-dialog-close]="true">
+                    <i class="fa fa-close"></i> Close
+                </button>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+</mat-dialog-actions>

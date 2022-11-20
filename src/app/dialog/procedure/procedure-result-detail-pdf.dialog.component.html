@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>{{ title }}</h2>
+<mat-dialog-content>
+    <div [hidden]="isPDFProgressSpinnerHidden" class="text-center" style="width: 100%;">
+        <mat-progress-spinner style="margin:0 auto;" [color]="primary" [mode]="'indeterminate'"></mat-progress-spinner>
+    </div>
+    <div [hidden]="isPDFContentHidden">
+        <pdf-viewer [src]="procedureResultPDFURL" [render-text]="true" style="display: block;"></pdf-viewer>
+        <iframe id="printPDF" name="printPDF" style="width:0%;height:0;border:0; border:none;"></iframe>
+    </div>
+    <br />
+    <br />
+</mat-dialog-content>
+<mat-dialog-actions>
+    <table border="0" style="width: 100%;">
+        <tr>
+            <td style="width: 89.5%;"></td>
+            <td style="width: 5%;" align="right">
+                <button mat-raised-button color="primary" [disabled]="isBtnPrintDisabled" (click)="btnPrintrocedureResultPDFClick()">
+                    <i class="fa fa-print fa-fw"></i> Print
+                </button>
+            </td>
+            <td style="width: 0.5%;"></td>
+            <td style="width: 5%;" align="right">
+                <button mat-raised-button color="warn" (click)="btnCloseProcedureResultPDFClick()">
+                    <i class="fa fa-close fa-fw"></i> Close
+                </button>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+</mat-dialog-actions>

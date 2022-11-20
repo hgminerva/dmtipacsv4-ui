@@ -1,0 +1,75 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a routerLink="/software/dashboard">Dashboard</a>
+    </li>
+    <li class="breadcrumb-item active">
+        User
+    </li>
+</ol>
+<div class="card">
+    <div class="card-header">
+        <table border="0" style="width: 100%;">
+            <tr>
+                <td style="width: 95%;">
+                    <div class="input-group">
+                        <button class="btn btn-info" type="button" [disabled]="isBtnRefreshUserDataDisabled" (click)="getUserData()">
+                            <i class="fa fa-refresh"></i>
+                        </button>
+                        &nbsp; &nbsp;
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <b>Show</b>
+                            </div>
+                        </div>
+                        <wj-combo-box #cboNumberOfRows [itemsSource]="cboShowNumberOfRows" [isEditable]="false" [isRequired]="true" [displayMemberPath]="'rowString'"
+                            [selectedValuePath]="'rowNumber'" (selectedIndexChanged)="cboShowNumberOfRowsOnSelectedIndexChanged(cboNumberOfRows.selectedValue)"
+                            style="width: 180px;">
+                        </wj-combo-box>
+                    </div>
+                </td>
+                <td style="width: 5%;" align="right">
+                    <button mat-raised-button color="warn" routerLink="/software/dashboard">
+                        <i class="fa fa-close"></i> Close
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="card-body">
+        <mat-progress-bar class="example-margin" [hidden]="isProgressBarHidden" [color]="'primary'" [mode]="'indeterminate'"></mat-progress-bar>
+        <wj-flex-grid #userFlexGrid [itemsSource]="userCollectionView" [selectionMode]="3" [frozenColumns]="1">
+            <wj-flex-grid-filter></wj-flex-grid-filter>
+            <wj-flex-grid-column [header]="Edit" [isReadOnly]="true" [isContentHtml]="true" [width]="95">
+                <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+                    <button mat-raised-button color="primary" class="btn-xs" (click)="btnEditUserClick()">
+                        <i class="fa fa-edit fa-fw"></i> Edit
+                    </button>
+                </ng-template>
+            </wj-flex-grid-column>
+            <wj-flex-grid-column [header]="'Username'" [binding]="'UserName'" [isReadOnly]="true" [width]="'1.5*'"></wj-flex-grid-column>
+            <wj-flex-grid-column [header]="'Full Name'" [binding]="'FullName'" [isReadOnly]="true" [width]="'2*'"></wj-flex-grid-column>
+            <wj-flex-grid-column [header]="'Address'" [binding]="'Address'" [isReadOnly]="true" [width]="'4*'"></wj-flex-grid-column>
+            <wj-flex-grid-column [header]="'Contact Number'" [binding]="'ContactNumber'" [isReadOnly]="true" [width]="'2*'"></wj-flex-grid-column>
+            <wj-flex-grid-column [header]="'User Type'" [binding]="'UserType'" [isReadOnly]="true" [width]="'2*'"></wj-flex-grid-column>
+        </wj-flex-grid>
+    </div>
+    <div class="card-footer">
+        <div class="col-sm-12 btn-group" style="padding: 5px 0px 5px 0px;">
+            <button type="button" class="btn btn-secondary" (click)="userCollectionView.moveToFirstPage()">
+                <i class="fa fa-fast-backward"></i>
+            </button>
+            <button type="button" class="btn btn-secondary" (click)="userCollectionView.moveToPreviousPage()">
+                <i class="fa fa-step-backward"></i>
+            </button>
+            <button type="button" class="btn btn-secondary" disabled style="width:100px">
+                {{ userCollectionView.pageIndex + 1 }} / {{ userCollectionView.pageCount }}
+            </button>
+            <button type="button" class="btn btn-secondary" (click)="userCollectionView.moveToNextPage()">
+                <i class="fa fa-step-forward"></i>
+            </button>
+            <button type="button" class="btn btn-secondary" (click)="userCollectionView.moveToLastPage()">
+                <i class="fa fa-fast-forward"></i>
+            </button>
+        </div>
+    </div>
+</div>
