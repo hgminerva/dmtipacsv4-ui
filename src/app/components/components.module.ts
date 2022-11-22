@@ -15,9 +15,9 @@ import { MatListModule } from '@angular/material/list';
 // =============
 // Wijmo Modules
 // =============
-import { WjGridFilterModule } from 'wijmo/wijmo.angular2.grid.filter';
-import { WjGridModule } from 'wijmo/wijmo.angular2.grid';
-import { WjInputModule } from 'wijmo/wijmo.angular2.input';
+import { WjGridFilterModule } from '@grapecity/wijmo.angular2.grid.filter';
+import { WjGridModule } from '@grapecity/wijmo.angular2.grid';
+import { WjInputModule } from '@grapecity/wijmo.angular2.input';
 
 // =========
 // Component

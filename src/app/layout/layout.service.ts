@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 // =============
 // Async Classes
 // =============
-import { ObservableArray } from 'wijmo/wijmo';
+import { ObservableArray } from '@grapecity/wijmo';
 import { Subject, Observable } from 'rxjs';
 
 import { AppSettings } from '../app-settings'
@@ -26,7 +26,7 @@ export class LayoutService {
     private defaultAPIHostURL: string = this.appSettings.defaultAPIHostURL;
 
     // ================
-    // Async Properties 
+    // Async Properties
     // ================
     public facilitiesSource = new Subject<ObservableArray>();
     public facilitiesObservable = this.facilitiesSource.asObservable();

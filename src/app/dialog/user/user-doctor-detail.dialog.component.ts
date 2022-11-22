@@ -10,7 +10,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { UserDoctorModel } from '../../model/user-doctor.model';
 import { UserService } from '../../user/user.service';
 
-import { ObservableArray } from 'wijmo/wijmo';
+import { ObservableArray } from '@grapecity/wijmo';
 
 @Component({
     selector: 'app-user-doctor-detail-dialog',

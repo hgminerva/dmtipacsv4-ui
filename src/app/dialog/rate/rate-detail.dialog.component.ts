@@ -10,7 +10,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { RateModel } from '../../model/rate.model';
 import { RateService } from '../../rate/rate.service';
 
-import { ObservableArray } from 'wijmo/wijmo';
+import { ObservableArray } from '@grapecity/wijmo';
 
 @Component({
     selector: 'app-rate-detail-dialog',

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 // =============
 // Async Classes
 // =============
-import { ObservableArray } from 'wijmo/wijmo';
+import { ObservableArray } from '@grapecity/wijmo';
 import { Subject, Observable } from 'rxjs';
 
 // =====
@@ -31,7 +31,7 @@ export class BodyPartsService {
     private defaultAPIHostURL: string = this.appSettings.defaultAPIHostURL;
 
     // ================
-    // Async Properties 
+    // Async Properties
     // ================
     public bodyPartsSource = new Subject<ObservableArray>();
     public bodyPartsObservable = this.bodyPartsSource.asObservable();

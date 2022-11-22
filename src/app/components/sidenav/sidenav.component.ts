@@ -18,7 +18,7 @@ import { ToastrService } from 'ngx-toastr';
 // ====================
 // Async Task and Wijmo
 // ====================
-import { ObservableArray, CollectionView } from 'wijmo/wijmo';
+import { ObservableArray, CollectionView } from '@grapecity/wijmo';
 
 // =======
 // Dialogs

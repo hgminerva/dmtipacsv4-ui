@@ -18,7 +18,7 @@ import { UserService } from './user.service';
 // ====================
 // Async Task and Wijmo
 // ====================
-import { ObservableArray, CollectionView } from 'wijmo/wijmo';
+import { ObservableArray, CollectionView } from '@grapecity/wijmo';
 
 // =======
 // Dialogs

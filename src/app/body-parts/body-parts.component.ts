@@ -19,9 +19,9 @@ import { BodyPartsDeleteDialogComponent } from '../dialog/body-parts/body-parts-
 // ====================
 // Async Task and Wijmo
 // ====================
-import { ObservableArray, CollectionView } from 'wijmo/wijmo';
+import { ObservableArray, CollectionView } from '@grapecity/wijmo';
 import { BodyPartsService } from './body-parts.service';
-import { WjFlexGrid } from 'wijmo/wijmo.angular2.grid';
+import { WjFlexGrid } from '@grapecity//wijmo.angular2.grid';
 
 // =====
 // Model

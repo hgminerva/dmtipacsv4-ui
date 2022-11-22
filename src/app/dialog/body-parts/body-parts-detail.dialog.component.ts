@@ -10,7 +10,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { BodyPartsModel } from '../../model/body-parts.model';
 import { BodyPartsService } from '../../body-parts/body-parts.service';
 
-import { ObservableArray } from 'wijmo/wijmo';
+import { ObservableArray } from '@grapecity/wijmo';
 
 @Component({
     selector: 'app-body-parts-detail-dialog',

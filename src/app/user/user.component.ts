@@ -12,9 +12,9 @@ import { ToastrService } from 'ngx-toastr';
 // ====================
 // Async Task and Wijmo
 // ====================
-import { ObservableArray, CollectionView } from 'wijmo/wijmo';
+import { ObservableArray, CollectionView } from '@grapecity/wijmo';
 import { UserService } from './user.service';
-import { WjFlexGrid } from 'wijmo/wijmo.angular2.grid';
+import { WjFlexGrid } from '@grapecity/wijmo.angular2.grid';
 
 // =====
 // Model

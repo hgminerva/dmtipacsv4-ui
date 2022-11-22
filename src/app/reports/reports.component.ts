@@ -9,9 +9,9 @@ import { Angular5Csv } from 'angular5-csv/Angular5-csv';
 // =================================
 // Async Task and Wijmo and Services
 // =================================
-import { ObservableArray, CollectionView } from 'wijmo/wijmo';
-import { WjFlexGrid } from 'wijmo/wijmo.angular2.grid';
-import { WjComboBox } from 'wijmo/wijmo.angular2.input';
+import { ObservableArray, CollectionView } from '@grapecity/wijmo';
+import { WjFlexGrid } from '@grapecity/wijmo.angular2.grid';
+import { WjComboBox } from '@grapecity/wijmo.angular2.input';
 import { ReportService } from './reports.service';
 
 // ======

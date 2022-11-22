@@ -13,8 +13,8 @@ import { ToastrService } from 'ngx-toastr';
 // =====
 // Wijmo
 // =====
-import { ObservableArray } from 'wijmo/wijmo';
-import { WjComboBox } from 'wijmo/wijmo.angular2.input';
+import { ObservableArray } from '@grapecity/wijmo';
+import { WjComboBox } from '@grapecity/wijmo.angular2.input';
 
 // =================
 // Service and Model

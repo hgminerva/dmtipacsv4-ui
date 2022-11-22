@@ -13,7 +13,7 @@ import { ModalityProcedureService } from '../../modality-procedure/modality-proc
 // =====
 // Wijmo
 // =====
-import { ObservableArray } from 'wijmo/wijmo';
+import { ObservableArray } from '@grapecity/wijmo';
 
 @Component({
   selector: 'app-modality-procedure-detail-dialog',
@@ -83,7 +83,7 @@ export class ModalityProcedureDetailDialogComponent {
         }
 
         this.cboModalityObservableArray = modalityObservableArray;
-        
+
         setTimeout(() => {
           this.modalityProcedureModel.ModalityId = modalityId;
         }, 1000);
@@ -135,7 +135,7 @@ export class ModalityProcedureDetailDialogComponent {
   // ===============================
   public btnCloseModalityProcedureClick(): void {
     this.detailModalityProcedureDialogRef.close();
-    
+
     if (this.modalityProcedureSubscription != null) this.modalityProcedureSubscription.unsubscribe();
     if (this.modalitySubscription != null) this.modalitySubscription.unsubscribe();
   }

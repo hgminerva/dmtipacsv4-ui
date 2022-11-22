@@ -21,8 +21,8 @@ import { UserService } from '../user/user.service';
 // ====================
 // Async Task and Wijmo
 // ====================
-import { ObservableArray, CollectionView } from 'wijmo/wijmo';
-import { WjFlexGrid } from 'wijmo/wijmo.angular2.grid';
+import { ObservableArray, CollectionView } from '@grapecity/wijmo';
+import { WjFlexGrid } from '@grapecity/wijmo.angular2.grid';
 
 // =====
 // Model

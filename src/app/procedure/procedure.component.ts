@@ -18,9 +18,9 @@ import { ToastrService } from 'ngx-toastr';
 // ====================
 // Async Task and Wijmo
 // ====================
-import { ObservableArray, CollectionView } from 'wijmo/wijmo';
-import { WjFlexGrid } from 'wijmo/wijmo.angular2.grid';
-import { WjComboBox } from 'wijmo/wijmo.angular2.input';
+import { ObservableArray, CollectionView } from '@grapecity/wijmo';
+import { WjFlexGrid } from '@grapecity/wijmo.angular2.grid';
+import { WjComboBox } from '@grapecity/wijmo.angular2.input';
 import { ProcedureService } from './procedure.service';
 
 // =====

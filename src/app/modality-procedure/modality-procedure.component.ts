@@ -19,9 +19,9 @@ import { ModalityProcedureDeleteDialogComponent } from '../dialog/modality-proce
 // ====================
 // Async Task and Wijmo
 // ====================
-import { ObservableArray, CollectionView } from 'wijmo/wijmo';
+import { ObservableArray, CollectionView } from '@grapecity/wijmo';
 import { ModalityProcedureService } from './modality-procedure.service';
-import { WjFlexGrid } from 'wijmo/wijmo.angular2.grid';
+import { WjFlexGrid } from '@grapecity/wijmo.angular2.grid';
 
 // =====
 // Model

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 // =============
 // Async Classes
 // =============
-import { ObservableArray } from 'wijmo/wijmo';
+import { ObservableArray } from '@grapecity/wijmo';
 import { Subject, Observable } from 'rxjs';
 
 // =====
@@ -32,7 +32,7 @@ export class ProcedureService {
     private defaultAPIHostURL: string = this.appSettings.defaultAPIHostURL;
 
     // ================
-    // Async Properties 
+    // Async Properties
     // ================
     public facilitiesSource = new Subject<ObservableArray>();
     public facilitiesObservable = this.facilitiesSource.asObservable();
@@ -81,7 +81,7 @@ export class ProcedureService {
         private http: Http,
         private appSettings: AppSettings
     ) { }
-    
+
     // =================
     // Get Facility List
     // =================

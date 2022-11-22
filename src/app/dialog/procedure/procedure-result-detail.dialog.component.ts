@@ -10,8 +10,8 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ProcedureResultModel } from '../../model/procedure-result.model';
 import { ProcedureService } from '../../procedure/procedure.service';
 
-import { ObservableArray } from 'wijmo/wijmo';
-import { WjComboBox } from 'wijmo/wijmo.angular2.input';
+import { ObservableArray } from '@grapecity/wijmo';
+import { WjComboBox } from '@grapecity/wijmo.angular2.input';
 
 @Component({
     selector: 'app-procedure-result-detail-dialog',

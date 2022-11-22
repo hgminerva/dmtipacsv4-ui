@@ -19,9 +19,9 @@ import { RateDeleteDialogComponent } from '../dialog/rate/rate-delete.dialog.com
 // ====================
 // Async Task and Wijmo
 // ====================
-import { ObservableArray, CollectionView } from 'wijmo/wijmo';
+import { ObservableArray, CollectionView } from '@grapecity/wijmo';
 import { RateService } from './rate.service';
-import { WjFlexGrid } from 'wijmo/wijmo.angular2.grid';
+import { WjFlexGrid } from '@grapecity/wijmo.angular2.grid';
 
 // =====
 // Model
